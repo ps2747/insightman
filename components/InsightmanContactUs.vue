@@ -92,6 +92,7 @@ export default {
     .ism-form-each select {
         z-index: 1;
         cursor: pointer;
+        background: white;
     }
     .ism-form-each:first-child {
         position: relative;

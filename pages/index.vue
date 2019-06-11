@@ -1,8 +1,10 @@
 <template>
-  <div class="index-pages">
+  <div class="index-page">
     <insightman-header-nav></insightman-header-nav>
     <insightman-front-product></insightman-front-product>
-    <insightman-btn title="產品介紹" bgColor="#FBEF41" bdColor="black"></insightman-btn>
+    <router-link to="/AboutProduct" class="router-link" style="text-decoration: none;">
+      <insightman-btn title="產品介紹" bgColor="#FBEF41" bdColor="black"></insightman-btn>
+    </router-link>
     <insightman-line></insightman-line>
     <div class="index-block">
       <h4 class="index-title">四大特色</h4>
@@ -40,7 +42,7 @@ export default {
 
 <style>
 @media (max-width: 899px) {
-  .index-pages {
+  .index-page {
     width: 100vw;
   }
   .index-title {
@@ -48,5 +50,8 @@ export default {
     font-weight: 500;  
     text-align: center;
   }
+  li a {
+    text-decoration: none;
+}
 }
 </style>
