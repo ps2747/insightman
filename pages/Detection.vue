@@ -16,7 +16,7 @@
                 <p>開啟藍芽後發動汽車</p>
             </div>
         </div>
-        <router-link to="/StartConnect" style="text-decoration: none;">
+        <router-link to="/connect" style="text-decoration: none;">
             <insightman-btn title="開始連線" bgColor="#FBEF41" bdColor="black"></insightman-btn>
         </router-link>
         <insightman-contact-us></insightman-contact-us>

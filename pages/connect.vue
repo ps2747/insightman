@@ -16,7 +16,7 @@
         </div>
         <!-- <insightman-btn title="重新連線" bgColor="#FBEF41" bdColor="black" @click="uploadData()"></insightman-btn> -->
         <button class="ism-button" @click="uploadData()" v-if="loading">重新連線</button>
-        <router-link to="/ToDetecting" v-else style="text-decoration: none;">
+        <router-link to="/detecting" v-else style="text-decoration: none;">
             <insightman-btn title="開始檢測" bgColor="#FBEF41" bdColor="black"></insightman-btn>
         </router-link>
         <insightman-contact-us></insightman-contact-us>

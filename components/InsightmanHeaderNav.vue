@@ -30,11 +30,9 @@
                 <div class="ism-header-hamburger" @click="showMenu()">
                     <img src="/header-hamburger-open.png" alt="" v-if="show">
                 </div>
-                <router-link to="/">
-                    <div class="ism-header-logo" @click="showMenu()">
+                <div class="ism-header-logo" @click="showMenu()">
                         <img src="/header-logo.png" alt="">
-                    </div>
-                </router-link>
+                </div>
                 <div class="ism-header-hamburger" @click="SelectLanguage(),showMenu()">
                     <img src="/header-earth-open.png" alt="" v-if="show">
                 </div>
@@ -56,11 +54,9 @@
                 <div class="ism-header-hamburger" @click="SelectLanguage()">
                     <img src="/header-hamburger-open.png" alt="">
                 </div>
-                <router-link to="/">
-                    <div class="ism-header-logo" @click="showMenu()" >
+                <div class="ism-header-logo" @click="SelectLanguage()" >
                         <img src="/header-logo.png" alt="">
-                    </div>
-                </router-link>
+                </div>
                 <div class="ism-header-hamburger" @click="SelectLanguage()" >
                     <img src="/header-earth-open.png" alt="" >
                 </div>
@@ -149,7 +145,7 @@ export default {
     .ism-header-menu-content {
         width: 80vw;
         height: 80vh;
-        margin: 3vh auto 5vh ;
+        margin: 5vh auto 5vh ;
         text-align: center;
     }
     .ism-header-menu-content li {

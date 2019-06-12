@@ -6,19 +6,19 @@
         </div>
         <div class="ism-market-research-box">
             <h6>「CO」降低幅度</h6>
-            <img src="/aboutProduct/market-1.png" alt="">
+            <img src="/product/market-1.png" alt="">
         </div>
         <div class="ism-market-research-box">
             <h6>「HC」降低幅度</h6>
-            <img src="/aboutProduct/market-2.png" alt="">
+            <img src="/product/market-2.png" alt="">
         </div>
         <div class="ism-market-research-box">
             <h6>節省油耗比例</h6>
-            <img src="/aboutProduct/market-3.png" alt="">
+            <img src="/product/market-3.png" alt="">
         </div>
         <div class="ism-market-research-box">
             <h6>引擎爆發力增加</h6>
-            <img src="/aboutProduct/market-4.png" alt="">
+            <img src="/product/market-4.png" alt="">
         </div>
         <insightman-btn title="更多產品" bgColor="#FBEF41" bdColor="black"></insightman-btn>
     </div>

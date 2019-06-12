@@ -2,7 +2,7 @@
   <div class="index-page">
     <insightman-header-nav></insightman-header-nav>
     <insightman-front-product></insightman-front-product>
-    <router-link to="/AboutProduct" class="router-link" style="text-decoration: none;">
+    <router-link to="/product" class="router-link" style="text-decoration: none;">
       <insightman-btn title="產品介紹" bgColor="#FBEF41" bdColor="black"></insightman-btn>
     </router-link>
     <insightman-line></insightman-line>

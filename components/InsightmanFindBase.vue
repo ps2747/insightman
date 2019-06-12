@@ -1,7 +1,7 @@
 <template>
     <div class="ism-findbase">
-        <img src="/findBase/findBase-logo.png" alt="">
-        <img src="/findBase/findBase-picture.png" alt="">
+        <img src="/find/findBase-logo.png" alt="">
+        <img src="/find/findBase-picture.png" alt="">
         <h4>尋找離您最近的服務保養中心</h4>
         <div class="ism-findbase-select">
                 <select name="question-type" required id="question-type">

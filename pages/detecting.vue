@@ -12,7 +12,7 @@
             <img src="/detection/speedometer.png" alt="">
         </div>
         <button class="ism-button" @click="oneMoreTime()" v-if="loading">下一步</button>
-        <router-link to="/ReportDetection" v-else style="text-decoration: none;">
+        <router-link to="/report" v-else style="text-decoration: none;">
             <insightman-btn title="檢測報告" bgColor="#FBEF41" bdColor="black"></insightman-btn>
         </router-link>
         <insightman-contact-us></insightman-contact-us>
