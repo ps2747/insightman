@@ -46,7 +46,9 @@
                 <li>線上商城</li>
                 <li>經銷據點</li>
                 <li>聯絡我們</li>
-                <insightman-btn title="會員中心" bgColor="#FBEF41" bdColor="black"></insightman-btn>
+                <router-link to="/member" style="text-decoration: none;">
+                    <insightman-btn title="會員中心" bgColor="#FBEF41" bdColor="black"></insightman-btn>
+                </router-link>
             </div>
         </div>
         <div class="ism-header-select" :class="selectOrNot">

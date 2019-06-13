@@ -8,19 +8,19 @@
             <div class="detecting-progress">
                 <progress-bar type="line" ref="line" :options="options"></progress-bar>
             </div>
+            <button class="ism-button" @click="oneMoreTime()" v-if="is_loading">下一步</button>
         </div>
         <div class="detecting" v-if="!loading">
             <h3>進行檢測</h3>
             <h4>第二次靜態加速</h4>
             <img src="/detection/speedometer.png" alt="">
-            <div class="detecting-progress">
-                <progress-bar type="line" ref="second" :options="options"></progress-bar>
+            <div class="detecting-progress" v-if="show_progress">
+                <progress-bar type="line" ref="line" :options="options"></progress-bar>
             </div>
+            <router-link to="/report" v-if="is_finish" style="text-decoration: none;">
+                <insightman-btn title="檢測報告" bgColor="#FBEF41" bdColor="black"></insightman-btn>
+            </router-link>
         </div>
-        <button class="ism-button" @click="oneMoreTime()" v-if="is_loading">下一步</button>
-        <router-link to="/report" v-if="is_finish" style="text-decoration: none;">
-            <insightman-btn title="檢測報告" bgColor="#FBEF41" bdColor="black"></insightman-btn>
-        </router-link>
         <insightman-contact-us></insightman-contact-us>
     </div>
 </template>
@@ -38,6 +38,7 @@ export default {
         loading: true,
         is_loading: false,
         is_finish: false,
+        show_progress: true,
         options: {
             color: '#B3212D',
             strokeWidth: 3,
@@ -70,16 +71,23 @@ export default {
     },
     methods:{
         async oneMoreTime(){
-            this.$refs.line.animate(0)
+            
+            // setTimeout(()=> {
+            this.show_progress = false;
+            // this.$refs.line.animate(0)
+            // }, 500)
+            setTimeout(()=> {
+            this.show_progress = true;
+            }, 600)
             this.is_loading = false;
             this.loading = false;
             setTimeout(()=> {
                 // this.loading = false;
                 this.$refs.line.animate(1.0)
-            }, 6000)
+            }, 1000)
             setTimeout(()=> {
                 this.is_finish = true;
-            }, 12000)     
+            }, 6500)     
         },
     },
     mounted: function () {
@@ -98,6 +106,7 @@ export default {
 @media (max-width:899px) {
     .detecting {
         margin-top: 40px;
+        height: 450px;
     }
     .detecting h3 {
         text-align: center;

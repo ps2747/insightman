@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.496" height="36.396" viewBox="0 0 45.496 36.396">
+  <g id="credit-card" transform="translate(1142.322 -93.561)">
+    <g id="Group_141" data-name="Group 141" transform="translate(-1142.322 93.561)">
+      <path id="Path_278" data-name="Path 278" d="M44.382,55.935A3.65,3.65,0,0,0,41.7,54.821H3.791a3.652,3.652,0,0,0-2.678,1.114A3.65,3.65,0,0,0,0,58.612V87.426A3.65,3.65,0,0,0,1.114,90.1a3.652,3.652,0,0,0,2.678,1.114H41.7A3.8,3.8,0,0,0,45.5,87.426V58.612A3.651,3.651,0,0,0,44.382,55.935ZM42.462,87.426a.767.767,0,0,1-.758.758H3.791a.768.768,0,0,1-.758-.758V73.019H42.463V87.426Zm0-23.507H3.033V58.612a.768.768,0,0,1,.758-.758H41.7a.768.768,0,0,1,.758.758V63.92Z" transform="translate(0 -54.821)" fill="#b3212d"/>
+      <rect id="Rectangle_115" data-name="Rectangle 115" width="6.066" height="3.033" transform="translate(6.066 27.297)" fill="#b3212d"/>
+      <rect id="Rectangle_116" data-name="Rectangle 116" width="9.099" height="3.033" transform="translate(15.166 27.297)" fill="#b3212d"/>
+    </g>
+  </g>
+</svg>
