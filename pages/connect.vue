@@ -47,6 +47,11 @@ export default {
             }, 2000)    
         },
     },
+    mounted: function(){
+        setTimeout(()=> {
+                this.loading = false;
+        }, 10000)
+    },
 }
 </script>
 

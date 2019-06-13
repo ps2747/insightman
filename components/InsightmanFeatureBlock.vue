@@ -2,7 +2,7 @@
     <div class="ism-feature">
         <img :src="src" alt="">
         <h3 v-html="title">{{title}}</h3>
-        <h6 v-html="text">{{text}}</h6>
+        <h6 v-html="content">{{content}}</h6>
     </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
     props:{
         src: String,
         title: String,
-        text: String,
+        content: String,
     },
 }
 </script>
