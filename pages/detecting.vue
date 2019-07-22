@@ -1,6 +1,6 @@
 <template>
     <div class="detecting-page">
-        <insightman-header-nav></insightman-header-nav>
+        <!-- <insightman-header-nav></insightman-header-nav> -->
         <div class="detecting" v-if="loading">
             <h3>進行檢測</h3>
             <h4>第一次靜態加速</h4>
@@ -21,19 +21,20 @@
                 <insightman-btn title="檢測報告" bgColor="#FBEF41" bdColor="black"></insightman-btn>
             </router-link>
         </div>
-        <insightman-contact-us></insightman-contact-us>
+        <!-- <insightman-contact-us></insightman-contact-us> -->
     </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
-import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
+// import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
+// import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
 import InsightmanBtn from '~/components/InsightmanBtn.vue';
 import VueProgress from 'vue-progress'
 Vue.use(VueProgress)
 
 export default {
+    layout: 'insightman',
     data:()=>({
         loading: true,
         is_loading: false,
@@ -65,8 +66,8 @@ export default {
         }, 
     }),
     components: {
-        InsightmanHeaderNav,
-        InsightmanContactUs,
+        // InsightmanHeaderNav,
+        // InsightmanContactUs,
         InsightmanBtn,
     },
     methods:{

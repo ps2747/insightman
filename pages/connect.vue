@@ -1,6 +1,6 @@
 <template>
     <div class="detection-page">
-        <insightman-header-nav></insightman-header-nav>
+        <!-- <insightman-header-nav></insightman-header-nav> -->
         <div class="connect-box" v-if="loading">
             <h3>儀器連線</h3>
             <div class="connect-loading">
@@ -19,25 +19,26 @@
         <router-link to="/detecting" v-else style="text-decoration: none;">
             <insightman-btn title="開始檢測" bgColor="#FBEF41" bdColor="black"></insightman-btn>
         </router-link>
-        <insightman-contact-us></insightman-contact-us>
+        <!-- <insightman-contact-us></insightman-contact-us> -->
     </div>
 </template>
 
 <script>
-import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
-import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
+// import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
+// import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
 import InsightmanBtn from '~/components/InsightmanBtn.vue';
 import Vue from 'vue';
 import { VueSpinners } from '@saeris/vue-spinners';
 Vue.use(VueSpinners)
 
 export default {
+    layout: 'insightman',
     data:()=>({
         loading: true,
     }),
     components: {
-        InsightmanHeaderNav,
-        InsightmanContactUs,
+        // InsightmanHeaderNav,
+        // InsightmanContactUs,
         InsightmanBtn,
     },
     methods:{

@@ -1,8 +1,22 @@
 <template>
   <div>
+    <insightman-header-nav></insightman-header-nav>
     <nuxt />
+    <insightman-contact-us></insightman-contact-us>
   </div>
 </template>
+
+<script>
+import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue'
+import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
+export default {
+  components: {
+    InsightmanHeaderNav,
+    InsightmanContactUs
+  }
+}
+</script>
+
 
 <style>
 html {

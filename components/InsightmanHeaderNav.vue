@@ -38,13 +38,13 @@
                 </div>
             </div>
             <div class="ism-header-menu-content">
-                <li>首頁</li>
+                <li @click="$router.push('/') & showMenu()">首頁</li>
                 <li>旗下品牌</li>
-                <li>公司簡介</li>
-                <li>產品介紹</li>
-                <li>排廢檢測</li>
-                <li>線上商城</li>
-                <li>經銷據點</li>
+                <li @click="$router.push('/about') & showMenu()">公司簡介</li>
+                <li @click="$router.push('/product') & showMenu()">產品介紹</li>  
+                <li @click="$router.push('/checkhold') & showMenu()">排廢檢測</li>
+                <li @click="$router.push('/shop') & showMenu()">線上商城</li>
+                <li @click="$router.push('/stronghold') & showMenu()">經銷據點</li>
                 <li>聯絡我們</li>
                 <router-link to="/member" style="text-decoration: none;">
                     <insightman-btn title="會員中心" bgColor="#FBEF41" bdColor="black"></insightman-btn>

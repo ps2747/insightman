@@ -1,6 +1,6 @@
 <template>
     <div class="Report-detection-page">
-        <insightman-header-nav></insightman-header-nav>
+        <!-- <insightman-header-nav></insightman-header-nav> -->
         <div class="Report-detection">
             <h3>檢測報告</h3>
             <div class="Report-content">
@@ -22,17 +22,18 @@
         <router-link to="/member" style="text-decoration: none;">
             <insightman-btn title="會員中心" bgColor="#FBEF41" bdColor="black"></insightman-btn>
         </router-link>
-        <insightman-contact-us></insightman-contact-us>
+        <!-- <insightman-contact-us></insightman-contact-us> -->
     </div>
 </template>
 
 <script>
-import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
-import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
+// import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
+// import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
 import InsightmanBtn from '~/components/InsightmanBtn.vue';
 
 
 export default {
+    layout: 'insightman',
     data:()=> ({
         report: {
             CO: '正常值',
@@ -42,8 +43,8 @@ export default {
         // isActive: false,
     }),
     components: {
-        InsightmanHeaderNav,
-        InsightmanContactUs,
+        // InsightmanHeaderNav,
+        // InsightmanContactUs,
         InsightmanBtn,
     },
     // mounted: function () {

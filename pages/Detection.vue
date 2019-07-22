@@ -1,6 +1,6 @@
 <template>
     <div class="detection-page">
-        <insightman-header-nav></insightman-header-nav>
+        <!-- <insightman-header-nav></insightman-header-nav> -->
         <div class="detection-tip">
             <h3>排廢檢測</h3>
             <div class="detection-tip-box">
@@ -19,18 +19,19 @@
         <router-link to="/connect" style="text-decoration: none;">
             <insightman-btn title="開始連線" bgColor="#FBEF41" bdColor="black"></insightman-btn>
         </router-link>
-        <insightman-contact-us></insightman-contact-us>
+        <!-- <insightman-contact-us></insightman-contact-us> -->
     </div>
 </template>
 
 <script>
-import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
-import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
+// import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
+// import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
 import InsightmanBtn from '~/components/InsightmanBtn.vue';
 export default {
+    layout: 'insightman',
     components: {
-        InsightmanHeaderNav,
-        InsightmanContactUs,
+        // InsightmanHeaderNav,
+        // InsightmanContactUs,
         InsightmanBtn,
     }
 }

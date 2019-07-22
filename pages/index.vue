@@ -1,10 +1,9 @@
 <template>
   <div class="index-page">
-    <insightman-header-nav></insightman-header-nav>
+    <!-- <insightman-header-nav></insightman-header-nav> -->
     <insightman-front-product></insightman-front-product>
-    <router-link to="/product" class="router-link" style="text-decoration: none;">
-      <insightman-btn title="產品介紹" bgColor="#FBEF41" bdColor="black"></insightman-btn>
-    </router-link>
+      <!-- <insightman-btn title="產品介紹" bgColor="#FBEF41" bdColor="black"></insightman-btn> -->
+      <button class="ism-button" @click="$router.push('/product')">產品介紹</button>
     <insightman-line></insightman-line>
     <div class="index-block">
       <h4 class="index-title">四大特色</h4>
@@ -15,27 +14,28 @@
     </div>
     <insightman-line></insightman-line>
     <insightman-find-base></insightman-find-base>
-    <insightman-contact-us></insightman-contact-us>
+    <!-- <insightman-contact-us></insightman-contact-us> -->
   </div>
 </template>
 
 <script>
-import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
+// import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
 import InsightmanFrontProduct from '~/components/InsightmanFrontProduct.vue';
 import InsightmanBtn from '~/components/InsightmanBtn.vue';
 import InsightmanLine from '~/components/InsightmanLine.vue';
 import InsightmanFeatureBlock from '~/components/InsightmanFeatureBlock.vue';
 import InsightmanFindBase from '~/components/InsightmanFindBase.vue';
-import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
+// import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
 export default {
+  layout:'insightman',
   components: {
-    InsightmanHeaderNav,
+    // InsightmanHeaderNav,
     InsightmanBtn,
     InsightmanFrontProduct,
     InsightmanLine,
     InsightmanFeatureBlock,
     InsightmanFindBase,
-    InsightmanContactUs,
+    // InsightmanContactUs,
   }
 }
 </script>
@@ -52,6 +52,19 @@ export default {
   }
   li a {
     text-decoration: none;
-}
+  }
+  .ism-button {
+    width: 150px;
+    height: 50px;
+    border: solid;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+    font-size: 21px;
+    font-weight: bold;
+    background-color: #FBEF41; 
+    color: black;
+    cursor: pointer;
+  }
 }
 </style>
