@@ -1,16 +1,22 @@
 <template>
     <div class="front-product">
-        <h6>為您的愛車補充能量</h6>
-        <h2>引擎精靈</h2>
+        <h6>{{productDes}}</h6>
+        <h2>{{productTitle}}</h2>
         <div class="front-product-box">
-            <img src="/product.png" alt="">
+            <img :src="productImg" alt="">
         </div>
+        <button class="ism-button" @click="$router.push(goProduct)">{{$t('all_btn_1')}}</button>
     </div>
 </template>
 
 <script>
 export default {
-
+    props: {
+        productDes: String,
+        productTitle: String,
+        productImg: String,
+        goProduct: String,
+    }
 }
 </script>
 
@@ -31,6 +37,22 @@ export default {
     }
     .front-product-box {
         margin: 35px auto;
+    }
+    .front-product-box img {
+        width: 100%;
+    }
+    .ism-button {
+        width: 150px;
+        height: 50px;
+        border: solid;
+        border-radius: 25px;
+        display: block;
+        margin: auto;
+        font-size: 21px;
+        font-weight: bold;
+        background-color: #FBEF41; 
+        color: black;
+        cursor: pointer;
     }
 }
 </style>

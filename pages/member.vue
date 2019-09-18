@@ -74,6 +74,15 @@ import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
 import InsightmanOnlyFooter from '~/components/InsightmanOnlyFooter.vue';
 import InsightmanBtn from '~/components/InsightmanBtn.vue';
 export default {
+    head(){
+        return  {
+            // title: 'BMI計算',
+            meta: [
+                { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0,user-scalable=0,' },
+            ]
+        }
+    },
     components: {
         InsightmanHeaderNav,
         InsightmanOnlyFooter,

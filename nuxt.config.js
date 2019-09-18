@@ -1,6 +1,6 @@
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -35,7 +35,28 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
+    [
+      'nuxt-i18n', {
+        locales: [
+          {
+            code: 'zh-TW',
+            file: 'zh-TW.js',
+            iso: 'zh-Hant',
+          },
+          {
+            code: 'CN',
+            file: 'zh-CN.js',
+            iso: 'zh-Hans',
+          },
+        ],
+        lazy: true,
+        langDir: 'lang/',
+        defaultLocale: 'zh-TW',
+        detectBrowserLanguage: false,
+      }
+    ]
   ],
+
   /*
   ** Build configuration
   */

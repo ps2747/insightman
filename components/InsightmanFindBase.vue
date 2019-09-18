@@ -2,17 +2,18 @@
     <div class="ism-findbase">
         <img src="/find/findBase-logo.png" alt="">
         <img src="/find/findBase-picture.png" alt="">
-        <h4>尋找離您最近的服務保養中心</h4>
+        <h4>{{$t('reservation_title')}}</h4>
         <div class="ism-findbase-select">
                 <select name="question-type" required id="question-type">
-                    <option value="select-tainan">臺南市</option>
-                    <option value="select-taichung">臺中市</option>
-                    <option value="select-taoyuan">桃園市</option>
-                    <option value="select-kaohsiung">高雄市</option>
+                    <option value="select-tainan">{{$t('reservation_option_1')}}</option>
+                    <option value="select-taichung">{{$t('reservation_option_2')}}</option>
+                    <option value="select-taoyuan">{{$t('reservation_option_3')}}</option>
+                    <option value="select-kaohsiung">{{$t('reservation_option_4')}}</option>
                 </select>
         </div>
-        <p>將由專業人士為您檢驗汽車，全方位的保養服務包含：汽車美容、檢驗排氣、引擎維護、定期追蹤。</p>
-        <insightman-btn title="立即預約" bgColor="#FBEF41" bdColor="black"></insightman-btn>
+        <p>{{$t('reservation_text')}}</p>
+        <!-- <insightman-btn title="立即預約" bgColor="#FBEF41" bdColor="black"></insightman-btn> -->
+        <button style="background-color:#FBEF41;border-color:#000;margin-top:15px;" @click="goContact" class="ism-button">{{$t('all_btn_3')}}</button>
     </div>
 </template>
 
@@ -22,6 +23,15 @@ export default {
     components:{
         InsightmanBtn,
     },
+    methods: {
+        goContact(){
+            if(this.$i18n.locale == 'CN') {
+                this.$router.push('/CN/contact')
+            } else {
+                this.$router.push('/contact')
+            }
+        }
+    }
 }
 </script>
 
@@ -69,6 +79,16 @@ export default {
         padding-left: 10px ;
         font-size: 22px;
         background: white;
+    }
+    .ism-button {
+        width: 150px;
+        height: 50px;
+        border: solid;
+        border-radius: 25px;
+        display: block;
+        margin: auto;
+        font-size: 21px;
+        font-weight: bold;
     }
 }
 </style>

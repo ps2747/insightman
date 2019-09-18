@@ -2,24 +2,29 @@
     <div class="ism-product-advantage">
         <!-- <img src="/product/background-line-1.png" alt=""> -->
         <div class="product-advantage-content">
-            <h4 style="text-align: center;">{{$t('engine_2_title')}}</h4>
-            <img style="width: 100%;" src="/engine-wizard-fea.png" alt="">
-            <h5>{{$t('engine_2_little_title_1')}}</h5>
-            <p v-html="$t('engine_2_text_1')"></p>
-            <h5>{{$t('engine_2_little_title_2')}}</h5>
-            <p v-html="$t('engine_2_text_2')"></p>
-            <h5>{{$t('engine_2_little_title_3')}}</h5>
-            <p v-html="$t('engine_2_text_3')"></p>
-            <h5>{{$t('engine_2_little_title_4')}}</h5>
-            <p v-html="$t('engine_2_text_4')"></p>
+            <h4 v-html="$t('gmg_2_title')"></h4>
+            <img style="width: 100%;" src="/gmg-fea.png" alt="">
+            <div class="short-style" id="text-area" style="margin-top:20px;">
+                <p v-html="$t('gmg_2_text')"></p>
+            </div>
         </div>
+        <button style="background-color:#FBEF41;border-color:#000;margin-top:15px;" v-if="!open_more" @click="readMore" class="ism-button">{{$t('all_btn_5')}}</button>
         <img src="/line-6.png" alt="">
     </div>
 </template>
 
 <script>
 export default {
-
+    data:()=>({
+        open_more: false,
+    }),
+    methods: {
+        readMore(){
+            document.getElementById('text-area').classList.add('long-style')
+            this.open_more = true
+        },
+    }
+    
 }
 </script>
 
@@ -63,6 +68,13 @@ export default {
         position: absolute;
         width: 100vw;
         bottom: -4.1vh;
+    }
+    .short-style {
+        height: 300px;
+        overflow: hidden;
+    }
+    .long-style {
+        height: auto;
     }
 }
 </style>

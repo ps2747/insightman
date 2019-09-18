@@ -1,32 +1,32 @@
 <template>
     <div>
         <div class="findbase-title">
-            <h4>尋找離您最近的服務保養中心</h4>
+            <h4>{{$t('reservation_title')}}</h4>
             <div class="ism-findbase-select">
                     <select name="question-type" required id="question-type">
-                        <option value="select-tainan">臺南市</option>
-                        <option value="select-taichung">臺中市</option>
-                        <option value="select-taoyuan">桃園市</option>
-                        <option value="select-kaohsiung">高雄市</option>
+                        <option value="select-tainan">{{$t('reservation_option_1')}}</option>
+                        <option value="select-taichung">{{$t('reservation_option_2')}}</option>
+                        <option value="select-taoyuan">{{$t('reservation_option_3')}}</option>
+                        <option value="select-kaohsiung">{{$t('reservation_option_4')}}</option>
                     </select>
             </div>
-            <p>將由專業人士為您檢驗汽車，全方位的保養服務包含：汽車美容、檢驗排氣、引擎維護、定期追蹤。</p>
+            <p>{{$t('reservation_text')}}</p>
             <!-- <insightman-btn title="立即預約" bgColor="#FBEF41" bdColor="black"></insightman-btn> -->
-            <button class="ism-button" @click="$router.push('/sendsuccess')">立即預約</button>
+            <button class="ism-button" @click="goContact">{{$t('all_btn_3')}}</button>
         </div>
         <div class="findbase-line"></div>
         <div class="findbase-select-area">
-            <input type="radio" name="area" id="taiwan" checked>
-            <label class="findbase-select-taiwan" for="taiwan" @click="show_taiwan = true">臺灣地區</label>
-            <input type="radio" name="area" id="asia">
-            <label class="findbase-select-asia" for="asia" @click="show_taiwan = false">亞太地區</label>
+            <input type="radio" name="area" id="taiwan" value="1" v-model="select_area">
+            <label class="findbase-select-taiwan" for="taiwan" @click="show_taiwan = true">{{$t('stronghold_tag_1')}}</label>
+            <input type="radio" name="area" id="asia" value="2" v-model="select_area">
+            <label class="findbase-select-asia" for="asia" @click="show_taiwan = false">{{$t('stronghold_tag_2')}}</label>
         </div>
-        <div class="findbase-show-taiwan" v-if="show_taiwan">
+        <div class="findbase-show-taiwan" v-if="select_area == '1'">
             <insightman-stronghold-block v-for="hold in getTaiwanHolds"
             :key="hold.id" :title="hold.title" :map="hold.map"
             :adress="hold.adress" :phone="hold.phone"></insightman-stronghold-block>
         </div>
-        <div class="findbase-show-asia" v-if="!show_taiwan">
+        <div class="findbase-show-asia" v-if="select_area == '2'">
             <insightman-stronghold-block v-for="hold in getAsiaHolds"
             :key="hold.id" :title="hold.title" :map="hold.map"
             :adress="hold.adress" :phone="hold.phone"></insightman-stronghold-block>
@@ -42,6 +42,7 @@ export default {
     data:()=>({
         holds: [],
         show_taiwan:true,
+        select_area: '1',
     }),
     components: {
         InsightmanBtn,
@@ -50,6 +51,19 @@ export default {
     async mounted(){
         if(process.client){
             this.holds = await require('~/config/insightman-stronghold')
+
+            if(sessionStorage['select_area']) {
+                this.select_area = sessionStorage['select_area']
+            }
+        }
+    },
+    methods:{
+        goContact(){
+            if(this.$i18n.locale == 'CN') {
+                this.$router.push('/CN/contact')
+            } else {
+                this.$router.push('/contact')
+            }
         }
     },
     computed:{
@@ -60,14 +74,15 @@ export default {
             } else {
                 return [];
             }
-        },getAsiaHolds(){
+        },
+        getAsiaHolds(){
             if(this.holds) {
                 const result_array = this.holds.filter(hold => hold.tags.find(tag => tag == 'asia'))
                 return result_array;
             } else {
                 return [];
             }
-        }
+        },
     }
 }
 </script>
@@ -145,7 +160,7 @@ export default {
         color: #ACACAC;
         font-size: 21px;
         font-weight: 500;
-        border-bottom: #FFF solid 2px;
+        border-bottom: transparent solid 2px;
     }
     .findbase-select-area #taiwan:checked ~  .findbase-select-taiwan,
     .findbase-select-area #asia:checked ~ .findbase-select-asia {

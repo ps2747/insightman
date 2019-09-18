@@ -1,32 +1,35 @@
 <template>
     <div class="about-product-page">
-        <!-- <insightman-header-nav></insightman-header-nav> -->
-        <h3 class="about-product-title">商品介紹</h3>
-        <insightman-front-product style="margin-top:40px;"></insightman-front-product>
-        <!-- <insightman-btn title="線上商城" bgColor="#FBEF41" bdColor="black"></insightman-btn> -->
-        <button class="ism-button" @click="$router.push('/shop')">線上商城</button>
+        <h3 class="about-product-title">{{$t('all_btn_1')}}</h3>
+        <insightman-product-info :productDes="$t('index_product_des_1')" :productTitle="$t('index_product_1')" 
+        productImg="/engine-wizard.jpg" :infoTitle="$t('engine_1_title')"
+        :infoText="$t('engine_1_text')"></insightman-product-info>
+        
         <insightman-product-advantage></insightman-product-advantage>
         <insightman-market-research></insightman-market-research>
-        <!-- <insightman-contact-us></insightman-contact-us> -->
+        <insightman-line></insightman-line>
+        <insightman-shop-link></insightman-shop-link>
     </div>
 </template>
 
 <script>
-// import InsightmanHeaderNav from '~/components/InsightmanHeaderNav.vue';
-import InsightmanFrontProduct from '~/components/InsightmanFrontProduct.vue';
+import InsightmanProductInfo from '~/components/InsightmanProductInfo.vue';
+// import InsightmanFrontProduct from '~/components/InsightmanFrontProduct.vue';
 import InsightmanBtn from '~/components/InsightmanBtn.vue';
 import InsightmanProductAdvantage from '~/components/InsightmanProductAdvantage.vue';
 import InsightmanMarketResearch from '~/components/InsightmanMarketResearch.vue';
-// import InsightmanContactUs from '~/components/InsightmanContactUs.vue';
+import InsightmanLine from '~/components/InsightmanLine.vue';
+import InsightmanShopLink from '~/components/InsightmanShopLink.vue';
 export default {
     layout: 'insightman',
     components:{
-        // InsightmanHeaderNav,
-        InsightmanFrontProduct,
+        InsightmanProductInfo,
+        // InsightmanFrontProduct,
         InsightmanBtn,
         InsightmanProductAdvantage,
         InsightmanMarketResearch,
-        // InsightmanContactUs,
+        InsightmanLine,
+        InsightmanShopLink,
     },
 }
 </script>

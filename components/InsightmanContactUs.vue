@@ -1,33 +1,34 @@
 <template>
     <div class="ism-contactus">
         <img src="/line-2.png" alt="">
-        <h3>聯絡我們</h3>
-        <p>感謝您光臨本公司網站，如果您有任何問題或對我們公司的產品有興趣，請詳細填寫以下表單並清楚告訴我們您的訴求，我們收到訊息將會請專人與您聯絡，再次感謝您。</p>
+        <h3>{{$t('menu_contact')}}</h3>
+        <p>{{$t('contact_text')}}</p>
         <form action="" method="post" class="ism-form">
             <div class="ism-form-each">
                 <select name="question-type" required id="question-type">
-                    <option value="select-quction">問題類別</option>
-                    <option value="">汽車保養</option>
-                    <option value="">零件選購</option>
+                    <option value="select-quction">{{$t('contact_input_1')}}</option>
+                    <option value="">{{$t('contact_input_1_option_1')}}</option>
+                    <option value="">{{$t('contact_input_1_option_2')}}</option>
+                    <option value="">{{$t('contact_input_1_option_3')}}</option>
                 </select>
             </div>
             <div class="ism-form-each">
-                <input type="text" name="guest-name" placeholder="請輸入姓名" required id="guest-name">
+                <input type="text" name="guest-name" :placeholder="$t('contact_input_2')" required id="guest-name">
             </div>
             <div class="ism-form-each">
-                <input type="text" name="guest-phone" placeholder="請輸入電話" required id="guest-phone">
+                <input type="text" name="guest-phone" :placeholder="$t('contact_input_3')" required id="guest-phone">
             </div>
             <div class="ism-form-each">
-                <input type="text" name="guest-mail" placeholder="請輸入e-mail" required id="guest-mail">
+                <input type="text" name="guest-mail" :placeholder="$t('contact_input_4')" required id="guest-mail">
             </div>
             <div class="ism-form-each">
-                <input type="text" name="guest-title" placeholder="請輸入主旨" required id="guest-title">
+                <input type="text" name="guest-title" :placeholder="$t('contact_input_5')" required id="guest-title">
             </div>
             <div class="ism-form-each">
-                <textarea type="text" name="guest-content" placeholder="請輸入聯絡內容" required id="guest-content" rows="7">
+                <textarea type="text" name="guest-content" :placeholder="$t('contact_input_6')" required id="guest-content" rows="7">
                 </textarea>
             </div>
-            <insightman-btn title="確認送出" bgColor="#FBEF41" bdColor="black" style="margin-bottom:20px;"></insightman-btn>
+            <insightman-btn :title="$t('all_btn_4')" bgColor="#FBEF41" bdColor="black" style="margin-bottom:20px;"></insightman-btn>
         </form>
         <img src="/line-3.png" alt="">
     </div>
@@ -46,6 +47,9 @@ export default {
 
 <style>
 @media (max-width:899px) {
+    #question-type {
+        appearance:none;
+    }
     .ism-contactus {
         position: relative;
         background-color: #B3212D;
