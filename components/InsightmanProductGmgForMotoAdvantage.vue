@@ -2,16 +2,11 @@
     <div class="ism-product-advantage">
         <!-- <img src="/product/background-line-1.png" alt=""> -->
         <div class="product-advantage-content">
-            <h4 style="text-align: center;">{{$t('engine_2_title')}}</h4>
-            <img style="width: 100%;" src="/engine-wizard-fea.jpg" alt="">
-            <h5>{{$t('engine_2_little_title_1')}}</h5>
-            <p v-html="$t('engine_2_text_1')"></p>
-            <h5>{{$t('engine_2_little_title_2')}}</h5>
-            <p v-html="$t('engine_2_text_2')"></p>
-            <h5>{{$t('engine_2_little_title_3')}}</h5>
-            <p v-html="$t('engine_2_text_3')"></p>
-            <h5>{{$t('engine_2_little_title_4')}}</h5>
-            <p v-html="$t('engine_2_text_4')"></p>
+            <h4>{{$t('gmgformoto_2_title')}}</h4>
+            <img style="width: 100%;" src="/gmgformoto-fea.jpg" alt="">
+            <div id="text-area" style="margin-top:20px;">
+                <p v-html="$t('gmgformoto_2_text')"></p>
+            </div>
         </div>
         <img src="/line-6.png" alt="">
     </div>
@@ -19,7 +14,13 @@
 
 <script>
 export default {
-
+    data:()=>({
+        
+    }),
+    methods: {
+        
+    }
+    
 }
 </script>
 
@@ -63,6 +64,13 @@ export default {
         position: absolute;
         width: 100vw;
         bottom: -4.1vh;
+    }
+    .short-style {
+        height: 300px;
+        overflow: hidden;
+    }
+    .long-style {
+        height: auto;
     }
 }
 </style>

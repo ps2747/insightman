@@ -42,6 +42,7 @@
                 <!-- <li>旗下品牌</li> -->
                 <li @click="$router.push(check_lang + '/about') & showMenu()">{{$t('menu_about')}}</li>
                 <li @click="$router.push(check_lang + '/product-gmg') & showMenu()">{{$t('menu_gmg')}}</li>  
+                <li @click="$router.push(check_lang + '/product-gmg-formoto') & showMenu()">{{$t('menu_gmgformoto')}}</li>  
                 <li @click="$router.push(check_lang + '/product-engine-wizard') & showMenu()">{{$t('menu_engine')}}</li>  
                 <!-- <li @click="$router.push('/checkhold') & showMenu()">排廢檢測</li> -->
                 <!-- <li @click="$router.push('/shop') & showMenu()">線上商城</li> -->

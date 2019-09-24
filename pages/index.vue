@@ -10,6 +10,7 @@
     
     <insightman-front-product style="margin-top:80px;" :productDes="$t('index_product_des_1')" :productTitle="$t('index_product_1')" productImg="/engine-wizard.jpg" :goProduct="check_lang + '/product-engine-wizard'"></insightman-front-product>
     <insightman-front-product style="margin-top:80px;" :productDes="$t('index_product_des_2')" :productTitle="$t('index_product_2')" productImg="/gmg.jpg" :goProduct="check_lang + '/product-gmg'"></insightman-front-product>
+    <insightman-front-product style="margin-top:80px;" :productDes="$t('index_product_des_3')" :productTitle="$t('index_product_3')" productImg="/gmg-formoto.jpg" :goProduct="check_lang + '/product-gmg-formoto'"></insightman-front-product>
       <!-- <insightman-btn title="產品介紹" bgColor="#FBEF41" bdColor="black"></insightman-btn> -->
       
     <insightman-line></insightman-line>
